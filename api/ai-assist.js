@@ -1,8 +1,8 @@
 // ============================================================
 // Vercel Serverless Function — وسيط آمن بين موقع نسق للأعمال وواجهة Anthropic (Claude) API
 // ============================================================
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+module.exports = async (req, res) => {
+if (req.method !== 'POST') {
     res.status(405).json({ error: 'استخدم POST لإرسال طلب تحليل.' });
     return;
   }
